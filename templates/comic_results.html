@@ -1,0 +1,9 @@
+<div  class="col-xs-12">
+    <ul id="" class="input comiclist list-unstyled">
+        <li ng-repeat="comic in comiclist">
+            <a href="#/comic_info/{{comic.id}}"><img  ng-model="comicInfo" class="img-responsive" ng-src="{{comic.image.super_url}}" ng-click="onSearchInfo()"></a>
+            <h4 class="text-center"><!--  -->{{comic.name}}<!--  --> </h4>
+    
+        </li>
+    </ul>
+</div>

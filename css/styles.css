@@ -1,0 +1,398 @@
+/* Comic-info CSS */
+
+/** {
+    border: blue 1px solid;
+}
+
+*/
+/*
++++++++++++++++++++++++++++++++++++
+This is the code for the first imput area.
+
+Below he reference of this CSS code:
+
+http://codepen.io/atunnecliffe/pen/gpKzQw
++++++++++++++++++++++++
+ */
+
+/html/body/ng-view/form/label {
+    font-family: 'Bangers', sans-serif;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 52px;
+}
+
+body {
+    margin: 5% auto 0 auto;
+    width: 90%;
+    max-width: 1125px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 2.5%;
+}
+
+h4 {
+    font-family: 'Bangers', sans-serif;
+    font-size: 28px;
+    margin-bottom: 2.5%;
+    color: yellow;
+}
+
+input,
+span,
+textarea {
+    font-family: 'Bangers', sans-serif;
+    color: yellow;
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 22px;
+}
+
+textarea:focus,
+input:focus {
+    outline: 0;
+}
+
+
+/* Question */
+
+
+/* Underline and Placeholder */
+
+input.question,
+textarea.question {
+    font-size: 120px;
+    font-weight: 300;
+    border-radius: 2px;
+    margin: 0;
+    border: none;
+    width: 80%;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    overflow-x: hidden;
+}
+
+input[type="submit"] {
+    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    display: block;
+    opacity: 0;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+    background-color: yellow;
+}
+
+#nme {
+    color: white;
+}
+
+input.question + label,
+textarea.question + label {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+    width: 10%;
+    border-top: 1px solid yellow;
+    -webkit-transition: width 0.4s ease;
+    transition: width 0.4s ease;
+    height: 0px;
+}
+
+input.question:focus + label,
+textarea.question:focus + label {
+    width: 80%;
+}
+
+input.question:focus,
+input.question:valid {
+    padding-top: 35px;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+    margin-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+    top: -100px;
+    font-size: 22px;
+    /*   this is the thext below the imput text: */
+    color: #333;
+    opacity: 0;
+}
+
+textarea.question:focus + label > span,
+textarea.question:valid + label > span {
+    top: -150px;
+    font-size: 22px;
+    color: #333;
+    opacity: 0;
+}
+
+input.question:valid + label,
+textarea.question:valid + label {
+    border-color: white;
+}
+
+input.question:invalid,
+textarea.question:invalid {
+    box-shadow: none;
+}
+
+input.question + label > span,
+textarea.question + label > span {
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: yellow;
+    /*  color of the question*/
+    font-size: 48px;
+    top: -66px;
+    left: 0px;
+    z-index: -1;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+    -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+    transition: opacity 0.2s ease, background 0.2s ease;
+    display: block;
+    opacity: 0;
+    margin: 10px 0 0 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #EEE;
+}
+
+input[type="submit"]:active {
+    background: #999;
+}
+
+input.question:valid ~ input[type="submit"],
+textarea.question:valid ~ input[type="submit"] {
+    -webkit-animation: appear 1s forwards;
+    animation: appear 1s forwards;
+}
+
+input.question:invalid ~ input[type="submit"],
+textarea.question:invalid ~ input[type="submit"] {
+    display: none;
+}
+
+@-webkit-keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*
+++++++++++++++++++++++++++++
+End of the CSS from searcher
+++++++++++++++++++++++++++++
+*/
+
+#logo {
+    padding: 0px;
+    margin: 0px;
+    width: 70%;
+    max-width: 300px
+}
+
+body {
+    background-image: url('/images/home_background_magazine.jpg');
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media only screen and (min-device-width: 750px) and (orientation: portrait) {
+    body {
+        background-image: url('/images/home_background_magazine.jpg');
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+    body {
+        background-image: url('images/home_background_mobile_small_magazine.jpg');
+    }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+    body {
+        background-image: url('images/home_background_magazine.jpg');
+    }
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: 18px 30px;
+    font-size: 19px;
+    line-height: 1.3333333;
+    border-radius: 0;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.desc-img-container {
+    display: flex;
+    width: 100%;
+}
+
+.img-container img {
+    padding: 0;
+    margin: 0;
+}
+
+.comiclist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: red;
+    font-size: 18px;
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    margin top: 50px;
+}
+
+.comiclist li {
+    width: 200px;
+    border: 1px;
+    border-color: grey;
+}
+
+header {
+    color: red;
+}
+
+
+/* Footer index.html */
+
+.info {
+    text-decoration: none;
+    color: grey;
+}
+
+.info:hover {
+    color: red;
+    text-decoration: none;
+}
+
+.footer {
+    
+    color: yellow;
+    right: 0;
+    bottom: 0;
+    font-size: 10px;
+    left: 0;
+    padding: 1rem;
+    padding-right: 5%;
+    background-color: none;
+    text-align: right;
+}
+
+
+/*
+++++++++++
+New Search for header
++++++++
+
+*/
+
+#custom-search-form {
+    margin: 0;
+    margin-top: 5px;
+    padding: 0;
+}
+
+#custom-search-form .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: width 0.2s ease-in-out;
+    -moz-transition: width 0.2s ease-in-out;
+    -o-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+#custom-search-form button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+
+    position: relative;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#custom-search-form > div > input {
+    color: black;
+}
+
+.search-query:focus + button {
+    z-index: 3;
+}
+
+.search-query:focus {
+    width: 260px;
+}
+
+
+.search_form {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: right;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+
+#custom-search-form > input {
+    margin: 0px;
+    color: black;
+}
+
+.icon-search {
+    display: inline;
+    float: left;
+    flex-wrap: nowrap;
+    background-position: left center;
+    margin: 0px;
+    background-image: url(/images/button_small.png);
+    background-repeat: no-repeat;
+}
