@@ -1,6 +1,14 @@
-<div>
-    <h4> {{comicSelected.name}} </h4>
-    <h4>{{ comicSelected.cover_date }}</h4>
-    <p> {{ comicSelected.description }}</p>
-    <img src="{{ comicSelected.image.small_url }}">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive cover_img" src="{{ comicSelected.image.small_url }}" alt="Comic Cover Not Available">
+        </div>
+        <div class="col-md-5">
+            <div class="textbox">
+                <h3><b>{{comicSelected.name}}</b></h3>
+                <p><em>{{ comicSelected.cover_date }}</em></p>
+                <p ng-bind-html="comicSelected.description">></p>
+            </div>
+        </div>
+    </div>
 </div>

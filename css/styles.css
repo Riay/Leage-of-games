@@ -1,10 +1,3 @@
-/* Comic-info CSS */
-
-/** {
-    border: blue 1px solid;
-}
-
-*/
 /*
 +++++++++++++++++++++++++++++++++++
 This is the code for the first imput area.
@@ -222,7 +215,7 @@ End of the CSS from searcher
 }
 
 body {
-    background-image: url('/images/home_background_magazine.jpg');
+    background-image: url('../images/home_background_magazine.jpg');
     background-color: black;
     background-size: cover;
     background-attachment: fixed;
@@ -232,19 +225,19 @@ body {
 
 @media only screen and (min-device-width: 750px) and (orientation: portrait) {
     body {
-        background-image: url('/images/home_background_magazine.jpg');
+        background-image: url('../images/home_background_magazine.jpg');
     }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
     body {
-        background-image: url('images/home_background_mobile_small_magazine.jpg');
+        background-image: url('../images/home_background_mobile_small_magazine.jpg');
     }
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
     body {
-        background-image: url('images/home_background_magazine.jpg');
+        background-image: url('../images/home_background_magazine.jpg');
     }
 }
 
@@ -367,11 +360,6 @@ New Search for header
     z-index: 3;
 }
 
-.search-query:focus {
-    width: 260px;
-}
-
-
 .search_form {
     display: flex;
     flex-wrap: wrap;
@@ -393,6 +381,54 @@ New Search for header
     flex-wrap: nowrap;
     background-position: left center;
     margin: 0px;
-    background-image: url(/images/button_small.png);
+    background-image: url('../images/button_small.png');
     background-repeat: no-repeat;
+}
+
+.img{
+    float:left;
+    -webkit-transition-duration: 0.5s;
+    }
+.img img{
+    padding:10px;
+    border:1px solid #fff;
+}
+.img:hover{
+    -webkit-transform:scale(0.8);
+    -webkit-box-shadow:0px 0px 30px #ccc;
+}   
+.img .mask{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    height: 100%; 
+    opacity:0.6;
+    cursor:pointer;
+    -webkit-transition-duration: 0.5s;
+}
+
+/* COMIC_INFO */
+
+.textbox {
+    color: white;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.textbox h3 {
+    font-family: 'Bangers', sans-serif;
+    font-size: 45px;
+}
+
+.textbox em {
+    font-size: 20px;
+}
+
+.header_mar {
+    padding-bottom: 40px;
+}
+
+.cover_img {
+    border-radius: 8px;
+    box-shadow: 0 0 15px 3px white;
 }

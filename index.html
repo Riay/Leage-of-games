@@ -11,23 +11,15 @@
 </head>
 
 <body>
+    <div>
+        <div ng-hide="section === 'comic_search'" ng-include src="'templates/includes/search_form.html'"></div>
+    </div>
 
-
-<div class="cover">
-  <div ng-hide="section === 'comic_search'" ng-include src="'/templates/includes/search_form.html'"></div>
-</div>
-
-
-
-   <!--  <div>
-        <a href=""><img id="logo" src="images/logo_medium.png"></a>
-    </div> -->
-    
     <ng-view></ng-view>
-    <div ng-hide="section === 'comic_search'" ng-include src="'/templates/includes/footer.html'"></div>
-   
+    
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/service.js"></script>
     <script type="text/javascript" src="js/config.js"></script>

@@ -1,1 +1,1 @@
-angular.module('comicApp', ['ngRoute'])
+angular.module('comicApp', ['ngRoute', 'ngSanitize'])
